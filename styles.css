@@ -1,0 +1,320 @@
+/* 🎨 VARIABLES DE COLOR Y TIPOGRAFÍA */
+:root {
+  --color-bg: #F4F1E8;
+  --color-text: #1E2326;
+  --color-accent: #025997;
+  --color-muted: #666;
+  --font-main: 'Inter', sans-serif;
+  --font-title: 'MuseoModerno', sans-serif;
+  --font-deco: 'Lobster', cursive;
+}
+
+/* 🧱 BASE GENERAL DEL BODY */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* 📦 CONTENEDOR PRINCIPAL DEL CONTENIDO */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+
+/* 🏷️ TÍTULO PRINCIPAL DE INICIO */
+.main-title {
+  font-family: var(--font-title);
+  font-size: 2em;
+  font-weight: 900;
+  color: var(--color-text);
+  text-align: center;
+  margin-top: 0;
+}
+
+/* 📌 NAVBAR SUPERIOR */
+.navbar {
+  width: 100%;
+  padding: 1em 2em;
+  background-color: var(--color-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-family: var(--font-main);
+  font-size: 1em;
+  font-weight: 500;
+  color: #4A4A4A;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--color-text);
+}
+
+/* 🧭 HEADER GENERAL */
+header {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🧾 SUBTÍTULO DE INICIO */
+.subheader {
+  font-family: var(--font-main);
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--color-accent);
+  margin-bottom: -0.25em;
+  margin-top: 0.5em;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* 🖼️ IMÁGENES GENERALES */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1em;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.logo-img {
+  max-width: 560px;
+  height: auto;
+  margin: 0 auto 1em;
+  display: block;
+}
+
+/* 📦 CONTENEDOR DE INICIO */
+.container {
+  max-width: 100%;
+  padding: 1.5em;
+  text-align: center;
+}
+
+/* 🧾 TÍTULOS GENERALES */
+h1, h2, h3 {
+  font-family: var(--font-title);
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.4em;
+  color: var(--color-accent);
+  text-align: left;
+  margin: 1.5em 0 0.5em;
+}
+
+/* 📝 PÁRRAFOS Y MARCADORES */
+p {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+mark {
+  background-color: #ffeaa7;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+/* 🔘 BOTONES */
+.button {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: #fff;
+  padding: 0.75em 1.5em;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1em;
+  margin: 1em 0;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  background-color: #014a7a;
+}
+
+/* 🖼️ GALERÍA DE INICIO */
+.gallery {
+  display: grid;
+  grid-template-areas:
+    "img1 img2"
+    "img3 img3";
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin: 2em 0;
+}
+
+.gallery img:nth-child(1) {
+  grid-area: img1;
+}
+
+.gallery img:nth-child(2) {
+  grid-area: img2;
+}
+
+.gallery img:nth-child(3) {
+  grid-area: img3;
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* 🍽️ LISTADO DE PRODUCTOS DEL MENÚ */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  margin-top: 0;
+  margin-bottom: 3em;
+  padding: 0;
+}
+
+/* 🖥️ AJUSTE DE GRILLA EN ESCRITORIO */
+@media (min-width: 768px) {
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5em;
+    padding: 0;
+  }
+}
+
+/* 🧁 ITEM INDIVIDUAL DEL MENÚ */
+.menu-item {
+  padding: 0.5em;
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Asegura que todo respete el ancho del main */
+* {
+  box-sizing: border-box;
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1em;
+  object-fit: cover;
+}
+
+.menu-text {
+  width: 100%;
+}
+
+.item-name {
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+  color: var(--color-text);
+}
+
+.item-description {
+  font-size: 0.95em;
+  color: #3B3B3B;
+  margin-bottom: 0.5em;
+}
+
+.item-price {
+  font-weight: 600;
+  color: #B80000;
+  font-size: 1em;
+}
+
+/* 🧭 FOOTER */
+footer {
+  background-color: var(--color-bg);
+  text-align: center;
+  padding: 2em 1em;
+  font-size: 0.9em;
+  color: #4A4A4A;
+}
+
+footer a {
+  color: #4A4A4A;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: var(--color-text);
+}
+
+/* 📱 RESPONSIVE PARA MÓVIL */
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-areas:
+      "img1"
+      "img2"
+      "img3";
+    grid-template-columns: 1fr;
+  }
+
+  .gallery img:nth-child(3) {
+    max-height: 200px;
+  }
+}
+
+/* 📱 RESPONSIVE PARA TABLET Y ESCRITORIO */
+@media (min-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.4em;
+  }
+
+  .container {
+    padding: 2em;
+  }
+}
